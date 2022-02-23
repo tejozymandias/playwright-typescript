@@ -31,7 +31,7 @@ The Playwright tests are run on different platforms like on-prem and BrowserStac
 
   | Module   | Test name                          | Description |
   | ---   | ---                                   | --- |
-  | e2e      | E2E Test                | This test scenario verifies successful product purchase lifecycle end-to-end. It demonstrates the [Page Object Model design pattern](https://www.browserstack.com/guide/page-object-model-in-selenium) and is also the default test executed in all the single test run profiles. |
+  | e2e      | E2E Test                | This test scenario verifies successful product purchase lifecycle end-to-end. |
   | login    | Check if Signin opens on clicking on favourites nav item          | This test verifies the login workflow with different types of valid login users. |
   | login    | Check Login with locked_user               | This test verifies the login workflow error for a locked user. |
   | offers   | Set GPS location to Mumbai and check offers     | This test mocks the GPS location for Mumbai and verifies that the product offers applicable for the Mumbai location are shown.   |
