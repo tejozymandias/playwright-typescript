@@ -7,7 +7,7 @@ const config = {
   timeout: 60000,
   use:{
     viewport: null,
-
+    baseURL: 'https://bstackdemo.com'
   },
   projects: [
     // -- BrowserStack Projects --
@@ -17,6 +17,7 @@ const config = {
       use: {
         browserName: 'chromium',
         channel: 'chrome',
+        
       },
     },
     {
