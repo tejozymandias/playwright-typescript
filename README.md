@@ -51,9 +51,6 @@ The Playwright tests are run on different platforms like on-prem and BrowserStac
 
 # On Premise / Self Hosted
 
-This infrastructure points to running the tests on your own machine using a browser (e.g. Chrome) using the browser's driver executables (e.g. ChromeDriver for Chrome). #{ Selenium enables this functionality using WebDriver for many popular browsers.}
-
-
 ## Running Your Tests
 
 ### Run a specific test on your own machine
@@ -169,7 +166,7 @@ In this section, we will run a single test on Chrome browser on Browserstack. To
   This run profile executes a single test on a single browser on BrowserStack. Please refer to your [BrowserStack dashboard](https://automate.browserstack.com/) for test results.
 
 
-### Run the entire test suite in parallel on a single BrowserStack browser
+### Run the entire test suite in parallel on BrowserStack browsers
 
 In this section, we will run the tests in parallel on a single browser on Browserstack. Refer to `playwright-bstack.conf.js` file to change test capabilities for this configuration.
 

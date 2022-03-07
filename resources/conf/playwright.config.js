@@ -4,7 +4,7 @@ const config = {
   use: {
     trace: 'on-first-retry',
   },
-  testDir: '../../src/onPremTests',
+  testDir: '../../src/test',
   projects: [
     {
       name: 'chromium',

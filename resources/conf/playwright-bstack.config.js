@@ -2,11 +2,12 @@ const { devices } = require('@playwright/test');
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
-  testDir: '../../src/bstackTests',
+  testDir: '../../src/test',
   workers : 10,
   timeout: 60000,
   use:{
-    viewport: null
+    viewport: null,
+
   },
   projects: [
     // -- BrowserStack Projects --
@@ -15,7 +16,7 @@ const config = {
       name: 'chrome@latest:Windows 10@browserstack',
       use: {
         browserName: 'chromium',
-        channel: 'chrome'
+        channel: 'chrome',
       },
     },
     {
@@ -28,14 +29,14 @@ const config = {
     {
       name: 'edge@90:Windows 10@browserstack',
       use: {
-        browserName: 'chromium'
+        browserName: 'chromium',
       },
     },
     {
       name: 'playwright-firefox@latest:Windows 10@browserstack',
       use: {
         browserName: 'firefox',
-        ignoreHTTPSErrors: true
+        ignoreHTTPSErrors: true,
       },
     },
     {
