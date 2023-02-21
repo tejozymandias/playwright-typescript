@@ -60,14 +60,14 @@ The Playwright tests are run on different platforms like on-prem and BrowserStac
   To run a specific test scenario, use the following command with the additional 'test-name' argument:
   
   ```sh
-  npx playwright test <spec-file> --headed --config=resources/conf/playwright.config.js --project <project-name>
+  npx playwright test <spec-file> --headed --config=resources/conf/playwright.config.ts --project <project-name>
   ```
 
   where,  the argument `<spec-file>` can be any spec files from the repository.
   
-  E.g. "e2e.spec.js", "login.spec.js", "product.spec.js" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
+  E.g. "e2e.spec.ts", "login.spec.ts", "product.spec.ts" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
 
-  Also, the argument `<project-name>` can be any of the project names from the `playwright.conf.js` file.
+  Also, the argument `<project-name>` can be any of the project names from the `playwright.conf.ts` file.
 
   Or, you can directly run the pre-confifured setup by running the below command:
   ```sh
@@ -84,7 +84,7 @@ The Playwright tests are run on different platforms like on-prem and BrowserStac
   To run the entire test suite on your own machine, use the following command:
   
   ```sh
-  npx playwright test --headed --config=resources/conf/playwright.config.js --workers 2
+  npx playwright test --headed --config=resources/conf/playwright.config.ts --workers 2
   ```
 
   Or, you can directly run the pre-confifured setup by running the below command:
@@ -125,10 +125,10 @@ The Playwright tests are run on different platforms like on-prem and BrowserStac
   set BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
   
-  Alternatively, you can also hardcode username and access_key objects in the [fixtures.js](./fixtures.js) file.
+  Alternatively, you can also hardcode username and access_key objects in the [fixtures.ts](./fixtures.ts) file.
 
 Note:
-- We have configured a list of test capabilities in the [playwright-bstack.config.js](resources/conf/playwright-bstack.config.js) file. You can certainly update them based on your device / browser test requirements. 
+- We have configured a list of test capabilities in the [playwright-bstack.config.ts](resources/conf/playwright-bstack.config.ts) file. You can certainly update them based on your device / browser test requirements. 
 - The exact test capability values can be easily identified using the [Browserstack Capability Generator](https://browserstack.com/automate/capabilities) and the allowed Browsers and OS are mentioned [here](https://www.browserstack.com/docs/automate/playwright/browsers-and-os)
 
 
@@ -136,7 +136,7 @@ Note:
 
 ### Run a specific test on BrowserStack
 
-In this section, we will run a single test on Chrome browser on Browserstack. To change test capabilities for this configuration, please refer to the `playwright-bstack.config.js` file.
+In this section, we will run a single test on Chrome browser on Browserstack. To change test capabilities for this configuration, please refer to the `playwright-bstack.config.ts` file.
 
 - How to run the test?
   
@@ -145,15 +145,15 @@ In this section, we will run a single test on Chrome browser on Browserstack. To
   Note: You can change the test you want to run by replacing the respective spec file.
 
   ```sh
-  npx playwright test <spec-file> --config=resources/conf/playwright-bstack.config.js --project 'chrome@latest:Windows 10@browserstack'"
+  npx playwright test <spec-file> --config=resources/conf/playwright-bstack.config.ts --project 'chrome@latest:Windows 10@browserstack'"
 
   ```
 
   where,  the argument `<spec-file>` can be any spec files from the repository.
   
-  E.g. "e2e.spec.js", "login.spec.js", "product.spec.js" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
+  E.g. "e2e.spec.ts", "login.spec.ts", "product.spec.ts" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
 
-  Also, the argument `<project-name>` can be any of the project names from the `playwright-bstack.conf.js` file.
+  Also, the argument `<project-name>` can be any of the project names from the `playwright-bstack.conf.ts` file.
 
   Or, you can directly run the pre-confifured setup by running the below command:
 
@@ -168,14 +168,14 @@ In this section, we will run a single test on Chrome browser on Browserstack. To
 
 ### Run the entire test suite in parallel on BrowserStack browsers
 
-In this section, we will run the tests in parallel on a single browser on Browserstack. Refer to `playwright-bstack.conf.js` file to change test capabilities for this configuration.
+In this section, we will run the tests in parallel on a single browser on Browserstack. Refer to `playwright-bstack.conf.ts` file to change test capabilities for this configuration.
 
 - How to run the test?
 
   To run the entire test suite in parallel on a single BrowserStack browser, use the following command:
   
   ```sh
-  npx playwright test --config=resources/conf/playwright-bstack.config.js --project '<project-name>' --workers 5
+  npx playwright test --config=resources/conf/playwright-bstack.config.ts --project '<project-name>' --workers 5
   ```
 
  Note: The `workers` argument mentions the number of tests you want to run in parallel at a time.
@@ -210,7 +210,7 @@ In this section, we will run the tests in parallel on a single browser on Browse
     ```
 * Please follow the README.md on the BrowserStack demo application repository to install and start the dev server on localhost.
 
-* In this section, we will run a single test case to test the BrowserStack Demo app hosted on your local machine i.e. localhost. Refer to the `playwright-bstack-local.conf.js` file for configuration and setup and teardown processes.
+* In this section, we will run a single test case to test the BrowserStack Demo app hosted on your local machine i.e. localhost. Refer to the `playwright-bstack-local.conf.ts` file for configuration and setup and teardown processes.
 
 Note: You may need to provide additional BrowserStackLocal arguments to successfully connect your localhost environment with BrowserStack infrastructure. (e.g if you are behind firewalls, proxy or VPN).
 
@@ -220,20 +220,20 @@ Note: You may need to provide additional BrowserStackLocal arguments to successf
   
 ## [Web application hosted on internal environment] Run a specific test on BrowserStack using BrowserStackLocal
 
-In this section, we will run a single test on Chrome browser on Browserstack. To change test capabilities for this configuration, please refer to the `playwright-bstack-local.config.js` file.
+In this section, we will run a single test on Chrome browser on Browserstack. To change test capabilities for this configuration, please refer to the `playwright-bstack-local.config.ts` file.
   
   To run a specific test scenario, use the following command :
   Note: You can change the test you want to run by replacing the respective spec file.
 
   ```sh
-  npx playwright test <spec-file> --config=resources/conf/playwright-bstack-local.config.js --project 'chrome@latest:Windows 10@browserstack'"
+  npx playwright test <spec-file> --config=resources/conf/playwright-bstack-local.config.ts --project 'chrome@latest:Windows 10@browserstack'"
   ```
 
   where,  the argument `<spec-file>` can be any spec files from the repository.
   
-  E.g. "e2e.spec.js", "login.spec.js", "product.spec.js" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
+  E.g. "e2e.spec.ts", "login.spec.ts", "product.spec.ts" or any of the other tests, as outlined in [About the tests in this repository](#About-the-tests-in-this-repository) section.
 
-  Also, the argument `<project-name>` can be any of the project names from the `playwright-bstack.conf.js` file.
+  Also, the argument `<project-name>` can be any of the project names from the `playwright-bstack.conf.ts` file.
 
 Or, you can directly run the pre-confifured setup by running the below command:
 
@@ -248,16 +248,16 @@ Or, you can directly run the pre-confifured setup by running the below command:
 
 ### [Web application hosted on internal environment] Run a tests in parallel on BrowserStack using BrowserStackLocal
 
-Refer the below snippet, here we will run the tests in parallel on a single browser on Browserstack. Refer to `playwright-bstack-local.conf.js` file to change test capabilities for this configuration.
+Refer the below snippet, here we will run the tests in parallel on a single browser on Browserstack. Refer to `playwright-bstack-local.conf.ts` file to change test capabilities for this configuration.
   
   ```sh
-  npx playwright test --config=resources/conf/playwright-bstack-local.config.js --project '<project-name>' --workers 5
+  npx playwright test --config=resources/conf/playwright-bstack-local.config.ts --project '<project-name>' --workers 5
   ```
 
-Refer the below snippet, here we will run the tests in parallel on a multiple browser on Browserstack. Refer to `playwright-bstack-local.conf.js` file to change test capabilities for this configuration.
+Refer the below snippet, here we will run the tests in parallel on a multiple browser on Browserstack. Refer to `playwright-bstack-local.conf.ts` file to change test capabilities for this configuration.
   
   ```sh
-  npx playwright test --config=resources/conf/playwright-bstack-local.config.js --workers 5
+  npx playwright test --config=resources/conf/playwright-bstack-local.config.ts --workers 5
   ```
 
  Note: The `workers` argument mentions the number of tests you want to run in parallel at a time.
