@@ -2,24 +2,26 @@
   "name": "browserstack-examples-playwright",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "dependencies": {
     "browserstack-local": "^1.4.8",
     "playwright": "^1.17.2",
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.17.2"
+    "@playwright/test": "^1.17.2",
+    "source-map-loader": "^4.0.1",
+    "ts-loader": "^9.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "onPrem-endToEnd": "npx playwright test login.spec.js --headed --config=resources/conf/playwright.config.js --project chromium",
-    "onPrem-parallel": "npx playwright test --headed --config=resources/conf/playwright.config.js --workers 2",
-    "bstack-single": "npx playwright test login.spec.js --config=resources/conf/playwright-bstack.config.js --project 'chrome@latest:Windows 10@browserstack'",
-    "bstack-parallel-tests": "npx playwright test --config=resources/conf/playwright-bstack.config.js --project 'chrome@latest:Windows 10@browserstack'",
-    "bstack-parallel-browsers": "npx playwright test e2e.spec.js --config=resources/conf/playwright-bstack.config.js --workers 2",
-    "bstack-local": "BROWSERSTACK_LOCAL=true npx playwright test login.spec.js --config=resources/conf/playwright-bstack-local.config.js --project 'chrome@latest:Windows 10@browserstack'",
-    "bstack-local-parallel": "BROWSERSTACK_LOCAL=true npx playwright test login.spec.js --config=resources/conf/playwright-bstack-local.config.js --workers 2"
+    "onPrem-endToEnd": "npx playwright test login.spec.js --headed --config=resources/conf/playwright.config.ts --project chromium",
+    "onPrem-parallel": "npx playwright test --headed --config=resources/conf/playwright.config.ts --workers 2",
+    "bstack-single": "npx playwright test login.spec.ts --config=resources/conf/playwright-bstack.config.ts --project 'chrome@latest:Windows 10@browserstack'",
+    "bstack-parallel-tests": "npx playwright test --config=resources/conf/playwright-bstack.config.ts --project 'chrome@latest:Windows 10@browserstack'",
+    "bstack-parallel-browsers": "npx playwright test e2e.spec.ts --config=resources/conf/playwright-bstack.config.ts --workers 2",
+    "bstack-local": "BROWSERSTACK_LOCAL=true npx playwright test login.spec.ts --config=resources/conf/playwright-bstack-local.config.ts --project 'chrome@latest:Windows 10@browserstack'",
+    "bstack-local-parallel": "BROWSERSTACK_LOCAL=true npx playwright test login.spec.ts --config=resources/conf/playwright-bstack-local.config.ts --workers 2"
   },
   "repository": {
     "type": "git",

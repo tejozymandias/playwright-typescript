@@ -1,3 +1,4 @@
+export {};
 const { expect } = require('@playwright/test');
 const { test } = require('../../fixtures');
 
